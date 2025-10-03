@@ -6,16 +6,63 @@
   "engines": {
     "vscode": "^1.104.0"
   },
-  "categories": [
-    "Other"
-  ],
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "changecase.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "text-case-converter.toUpper",
+        "title": "Convert to UPPERCASE"
+      },
+      {
+        "command": "text-case-converter.toLower",
+        "title": "Convert to lowercase"
+      },
+      {
+        "command": "text-case-converter.toTitle",
+        "title": "Convert to Title Case"
+      },
+      {
+        "command": "text-case-converter.toCamel",
+        "title": "Convert to camelCase"
+      },
+      {
+        "command": "text-case-converter.toSnake",
+        "title": "Convert to snake_case"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "text-case-converter.toUpper",
+        "key": "ctrl+shift+u",
+        "mac": "cmd+shift+u",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "text-case-converter.toLower",
+        "key": "ctrl+shift+l",
+        "mac": "cmd+shift+l",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "text-case-converter.toTitle",
+        "key": "ctrl+shift+t",
+        "mac": "cmd+shift+t",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "text-case-converter.toCamel",
+        "key": "ctrl+shift+c",
+        "mac": "cmd+shift+c",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "text-case-converter.toSnake",
+        "key": "ctrl+shift+s",
+        "mac": "cmd+shift+s",
+        "when": "editorTextFocus"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
