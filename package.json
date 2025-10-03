@@ -1,13 +1,22 @@
 {
   "name": "changecase",
-  "displayName": "ChangeCase",
-  "description": "",
+  "displayName": "Change-Case by Kabir",
+  "publisher": "KabirSinghSidhu",
+  "description": "Instantly convert text between different cases with keyboard shortcuts: UPPERCASE, lowercase, Title Case, camelCase, snake_case, and CONSTANT_CASE",
   "version": "0.0.1",
+    "author": {
+    "name": "Kabir Singh Sidhu",
+    "url": "https://kabirsidhu.dev/"
+  },
   "engines": {
     "vscode": "^1.104.0"
   },
   "activationEvents": [],
   "main": "./extension.js",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/kab1rs1dhu/ChangeCase"
+  },
   "contributes": {
     "commands": [
       {
