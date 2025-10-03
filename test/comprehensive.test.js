@@ -34,7 +34,7 @@ suite('Comprehensive Test Suite with Helpers', () => {
             const edgeCases = getEdgeCases();
             
             edgeCases.forEach(input => {
-                // Should not throw errors
+
                 assert.doesNotThrow(() => toUpper(input), `toUpper failed for input: "${input}"`);
                 assert.doesNotThrow(() => toLower(input), `toLower failed for input: "${input}"`);
                 assert.doesNotThrow(() => toTitle(input), `toTitle failed for input: "${input}"`);

@@ -1,65 +1,117 @@
-# changecase README
+# ChangeCase - Text Case Converter
 
-This is the README for your extension "changecase". After writing up a brief description, we recommend including the following sections.
+A powerful VS Code extension that provides instant text case conversion with keyboard shortcuts. Transform selected text between different naming conventions commonly used in programming and writing.
 
-## Features
+Created by **Kabir Singh Sidhu** | [Portfolio](https://kabirsidhu.dev/)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## ✨ Features
 
-For example if there is an image subfolder under your extension project workspace:
+ChangeCase offers six different text transformation modes:
 
-\!\[feature X\]\(images/feature-x.png\)
+- **UPPERCASE** - Convert text to ALL CAPS
+- **lowercase** - Convert text to all lowercase  
+- **Title Case** - Convert Text To Title Case Format
+- **camelCase** - Convert text to camelCase (commonly used in JavaScript)
+- **snake_case** - Convert text to snake_case (commonly used in Python)
+- **CONSTANT_CASE** - Convert text to CONSTANT_CASE (for constants and environment variables)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### Smart Conversion
+- Preserves existing formatting where appropriate
+- Handles mixed input formats intelligently
+- Works with single words, phrases, and multi-line selections
+- Supports special characters and numbers
 
-## Requirements
+## 🚀 Usage
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. **Select text** in your editor
+2. Use one of the **keyboard shortcuts** or **command palette**
+3. Watch your text transform instantly!
 
-## Extension Settings
+### Keyboard Shortcuts
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+#### Windows/Linux:
+- `Ctrl+Shift+U` - Convert to **UPPERCASE**
+- `Ctrl+Shift+L` - Convert to **lowercase**
+- `Ctrl+Shift+T` - Convert to **Title Case**
+- `Ctrl+Shift+C` - Convert to **camelCase**
+- `Ctrl+Shift+S` - Convert to **snake_case**
+- `Ctrl+Shift+K` - Convert to **CONSTANT_CASE**
 
-For example:
+#### macOS:
+- `Cmd+Shift+U` - Convert to **UPPERCASE**
+- `Cmd+Shift+L` - Convert to **lowercase**
+- `Cmd+Shift+T` - Convert to **Title Case**
+- `Cmd+Shift+C` - Convert to **camelCase**
+- `Cmd+Shift+S` - Convert to **snake_case**
+- `Cmd+Shift+K` - Convert to **CONSTANT_CASE**
 
-This extension contributes the following settings:
+### Command Palette
+You can also access all commands through the VS Code Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`):
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- `Convert to UPPERCASE`
+- `Convert to lowercase`
+- `Convert to Title Case`
+- `Convert to camelCase`
+- `Convert to snake_case`
+- `Convert to CONSTANT_CASE`
 
-## Known Issues
+## 📝 Examples
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+| Input | Output | Conversion |
+|-------|---------|------------|
+| `hello world` | `HELLO WORLD` | UPPERCASE |
+| `HELLO WORLD` | `hello world` | lowercase |
+| `hello world` | `Hello World` | Title Case |
+| `hello world` | `helloWorld` | camelCase |
+| `hello world` | `hello_world` | snake_case |
+| `hello world` | `HELLO_WORLD` | CONSTANT_CASE |
+| `UserAccount` | `userAccount` | camelCase |
+| `getUserName` | `get_user_name` | snake_case |
 
-## Release Notes
+## 🛠️ Requirements
 
-Users appreciate release notes as you update your extension.
+- VS Code version 1.104.0 or higher
+- No additional dependencies required
 
-### 1.0.0
+## ⚙️ Installation
 
-Initial release of ...
+1. Open VS Code
+2. Go to Extensions (`Ctrl+Shift+X` / `Cmd+Shift+X`)
+3. Search for "ChangeCase"
+4. Click Install
+5. Start converting text with keyboard shortcuts!
 
-### 1.0.1
+## 🎯 Use Cases
 
-Fixed issue #.
+Perfect for developers working with:
+- **JavaScript/TypeScript** - Convert between camelCase and other formats
+- **Python** - Convert to snake_case conventions
+- **Constants** - Create CONSTANT_CASE for environment variables
+- **Documentation** - Format text in Title Case
+- **General text editing** - Quick case conversions
 
-### 1.1.0
+## 🤝 Contributing
 
-Added features X, Y, and Z.
+Found a bug or have a feature request? I'd love to hear from you!
+
+- Visit my portfolio: [kabirsidhu.dev](https://kabirsidhu.dev/)
+- Report issues on the GitHub repository
+- Suggestions and feedback are always welcome
+
+## 📜 License
+
+MIT License - feel free to use and modify as needed.
+
+## 🙏 Acknowledgments
+
+Built with ❤️ by Kabir Singh Sidhu for the VS Code community.
 
 ---
 
-## Working with Markdown
+**Enjoy using ChangeCase!** 🚀
 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+If you find this extension helpful, please consider leaving a review and sharing it with your fellow developers!
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+---
 
 **Enjoy!**

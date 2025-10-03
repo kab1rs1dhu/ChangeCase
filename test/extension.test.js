@@ -68,9 +68,7 @@ suite('Extension Test Suite', () => {
 
 	suite('Error Handling Tests', () => {
 		test('Functions should handle null and undefined gracefully', () => {
-			// These tests check if functions throw errors or handle edge cases
 			try {
-				// These will likely throw errors, which is expected behavior
 				toUpper(null);
 				assert.fail('Should have thrown an error for null input');
 			} catch (error) {
