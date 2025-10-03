@@ -1,5 +1,12 @@
 # ChangeCase - Text Case Converter
 
+## Installation
+
+1. Open VS Code
+2. Go to Extensions (Ctrl+Shift+X / Cmd+Shift+X)
+3. Search for `Camel-Case by Kabir`
+4. Click Install
+
 A powerful VS Code extension that provides instant text case conversion with keyboard shortcuts. Transform selected text between different naming conventions commonly used in programming and writing.
 
 Created by **Kabir Singh Sidhu** | [Portfolio](https://kabirsidhu.dev/)
