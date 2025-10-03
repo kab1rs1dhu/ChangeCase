@@ -29,6 +29,10 @@
       {
         "command": "text-case-converter.toSnake",
         "title": "Convert to snake_case"
+      },
+      {
+        "command": "text-case-converter.toConstant",
+        "title": "Convert to CONSTANT_CASE"
       }
     ],
     "keybindings": [
@@ -60,6 +64,12 @@
         "command": "text-case-converter.toSnake",
         "key": "ctrl+shift+s",
         "mac": "cmd+shift+s",
+        "when": "editorTextFocus"
+      },
+      {
+        "command" : "text-case-converter.toConstant",
+        "key": "ctrl+shift+k",
+        "mac": "cmd+shift+k",
         "when": "editorTextFocus"
       }
     ]

@@ -1,13 +1,8 @@
 const vscode = require('vscode');
-
-
+const { toUpper, toLower, toTitle, toCamel, toSnake, toConstant } = require('./functions');
 
 function activate(context) {
 
-	/**
-	 * @function toLower
-	 * Converts selected text to uppercase
-	 */
 	let upperCommand = vscode.commands.registerCommand('text-case-converter.toUpper', function () {
 		const editor = vscode.window.activeTextEditor;
 
@@ -17,9 +12,10 @@ function activate(context) {
 
 		const selection = editor.selection;
 		const text = editor.document.getText(selection);
+		const upperText = toUpper(text);
 
 		editor.edit(editBuilder => {
-			editBuilder.replace(selection, text.toUpperCase());
+			editBuilder.replace(selection, upperText);
 		});
 	});
 
@@ -31,23 +27,13 @@ function activate(context) {
 
 		const selection = editor.selection;
 		const text = editor.document.getText(selection);
+		const lowerText = toLower(text);
 
 		editor.edit(editBuilder => {
-			editBuilder.replace(selection, text.toLowerCase());
+			editBuilder.replace(selection, lowerText);
 		});
 	});
 
-
-
-	/**
-	 *   const titleCase = text.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
-	 * Here's how it works:
-	 * - `text.toLowerCase()`: Converts the entire selected text to lower case to ensure consistency.
-	 * - `.replace(/\b\w/g, char => char.toUpperCase())`:
-	 *     - The regular expression `/\b\w/g` matches every word boundary (`\b`) followed by a word character (`\w`).
-	 *     - For each match, the callback `char => char.toUpperCase()` is called, converting the first character of each word to upper case.
-	 * - The result is a string where the first letter of each word is capitalized and the rest are in lower case, i.e., title case.
-	 */
 	let titleCommand = vscode.commands.registerCommand('text-case-converter.toTitle', function () {
 		const editor = vscode.window.activeTextEditor;
 		if (!editor) {
@@ -56,15 +42,66 @@ function activate(context) {
 
 		const selection = editor.selection;
 		const text = editor.document.getText(selection);
-
-		const titleCase = text.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+		const titleText = toTitle(text);
 
 		editor.edit(editBuilder => {
-			editBuilder.replace(selection, titleCase);
+			editBuilder.replace(selection, titleText);
 		});
 	});
 
+	let camelCommand = vscode.commands.registerCommand('text-case-converter.toCamel', function () {
+		const editor = vscode.window.activeTextEditor;
+		if (!editor) {
+			return; 
+		}
 
+		const selection = editor.selection;
+		const text = editor.document.getText(selection);
+		const camelText = toCamel(text);
+		
+		editor.edit(editBuilder => {
+			editBuilder.replace(selection, camelText);
+		});
+	});
+
+	let snakeCommand = vscode.commands.registerCommand('text-case-converter.toSnake', function () {
+		const editor = vscode.window.activeTextEditor;
+		if (!editor) {
+			return; 
+		}
+
+		const selection = editor.selection;
+		const text = editor.document.getText(selection);
+		const snakeText = toSnake(text);
+		
+		editor.edit(editBuilder => {
+			editBuilder.replace(selection, snakeText);
+		});
+	});
+
+	let makeConstantCommand = vscode.commands.registerCommand('text-case-converter.toConstant', function () {
+		const editor = vscode.window.activeTextEditor;
+		if (!editor) {
+			return; 
+		}
+		
+		const selection = editor.selection;
+		const text = editor.document.getText(selection);
+		const constantText = toConstant(text);
+
+		
+		editor.edit(editBuilder => {
+			editBuilder.replace(selection, constantText);
+		});
+	});
+
+	// Register all commands with the context
+	context.subscriptions.push(upperCommand);
+	context.subscriptions.push(lowerCommand);
+	context.subscriptions.push(titleCommand);
+	context.subscriptions.push(camelCommand);
+	context.subscriptions.push(snakeCommand);
+	context.subscriptions.push(makeConstantCommand);
 }
 function deactivate() { }
 
